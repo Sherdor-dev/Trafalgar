@@ -1,0 +1,243 @@
+.hero{
+    padding: 0 15px;
+    margin: 100px 0px;
+    & h2{
+        font-family: 'Mulish';
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 56px;
+        color: #000000;
+        text-align: center;
+    }
+    & h2::after{
+        content: "";
+        display: block;
+        width: 50px;
+        height: 3px;
+        margin-left: 50%;
+        transform: translate(-50%);
+        background-color: #666666;
+    }
+    #heroP{
+        margin-top: 30px;
+        display: flex;
+        margin-left: 50%;
+        transform: translate(-50%);
+        font-family: 'Mulish';
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 30px;
+        font-family: 'Mulish';
+        text-align: center;
+        color: #7D7987;
+        width: 70%;
+    }
+    &__cards{
+        margin: 70px 0px;
+        display: grid;
+        justify-content: center;
+        gap: 37px;
+        grid-template-columns: repeat(3,25%);
+        &--item{
+            width: 100%;
+            background: #FFFFFF;           
+            box-shadow: 10px 40px 50px rgba(227, 227, 227, 0.632);
+            border-radius: 20px;
+            padding: 54px 42px;
+            & h3{
+                margin-top: 20px;
+                font-family: 'Mulish';
+                font-weight: 700;
+                font-size: 24px;
+                color: #000000;
+            }
+            & p{
+                font-family: 'Mulish';
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 28px;
+                color: #7D7987;
+            }
+        }
+    }
+    & form button{
+        margin-left: 50%;
+        transform: translate(-50%);
+        width: 200px;
+        height: 50px;
+        font-family: 'Mulish';
+        font-weight: 700;
+        font-size: 18px;       
+        color: #458FF6;
+        background-color: #FFFFFF;
+        border: 2px solid #458FF6;
+        border-radius: 55px;
+    }
+    & form button:hover{
+        border: none;
+        background-color: #458FF6;
+        color: #FFFFFF;
+    }
+}
+@media only screen and(max-width: 1200px){
+    .hero{
+        padding: 0 15px;
+        margin-top: 90px;
+        & h2{
+            font-size: 34px;
+            line-height: 48px;
+        }
+        #heroP{
+            font-size: 18px;
+            line-height: 26px;
+        }
+        &__cards{
+            margin: 70px 0px;
+            display: grid;
+            justify-content: center;
+            gap: 32px;
+            grid-template-columns: repeat(3,30%);
+            &--item{
+
+                padding: 48px 38px;
+                & h3{
+                    margin-top: 20px;
+                    font-size: 21px;
+                }
+                & p{
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+}
+@media only screen and(max-width:1000px){
+    .hero{
+        & h2{
+            font-size: 30px;
+            line-height: 42px;
+        }
+        #heroP{
+            font-size: 16px;
+            text-align: center;
+        }
+        &__cards{
+            margin: 70px 0px;
+            gap: 28px;
+            grid-template-columns: repeat(3,30%);
+            &--item{
+                & img{
+                    width: 25%;
+                }
+                padding: 40px 32px;
+                & h3{
+                    margin-top: 28px;
+                    font-size: 21px;
+                }
+                & p{
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+        & form button{
+            width: 180px;
+            height: 45px;
+        }
+    }
+}
+@media only screen and(max-width:768px){
+    .hero{
+        padding: 0 15px;
+        margin-top: 100px;
+        & h2{
+            font-size: 32px;
+            line-height: 42px;
+        }
+        #heroP{
+            font-size: 15px;
+            width: 80%;
+        }
+        &__cards{
+            gap: 24px;
+            grid-template-columns: repeat(2,40%);
+            &--item{
+                & h3{
+                    font-size: 20px;
+                }
+                & p{
+                    font-size: 14px;
+                    line-height: 28px;
+                }
+            }
+        }
+        & form button{
+            width: 170px;
+            height: 45px;
+        }
+    }
+}
+@media only screen and(max-width:576px){
+    .hero{
+        margin-top: 80px;
+        & h2{
+            font-size: 32px;
+            line-height: 42px;
+        }
+        #heroP{
+            font-size: 15px;
+            width: 80%;
+        }
+        &__cards{
+            gap: 37px;
+            grid-template-columns: repeat(1,70%);
+            &--item{
+                & h3{
+                    margin-top: 28px;
+                    font-size: 24px;
+                }
+                & p{
+                    font-size: 18px;
+                    line-height: 36px;
+                }
+            }
+        }
+        & form button{
+            width: 170px;
+            height: 45px;
+        }
+    }
+}
+@media only screen and(max-width:480px){
+    .hero{
+        margin-top: 80px;
+        & h2{
+            font-size: 32px;
+            line-height: 42px;
+        }
+        #heroP{
+            font-size: 15px;
+            width: 96%;
+        }
+        &__cards{
+            gap: 65px;
+            grid-template-columns: repeat(1,80%);
+            &--item{
+                & h3{
+                    margin-top: 28px;
+                    font-size: 21px;
+                    line-height: 38px;
+                }
+                & p{
+                    font-size: 15px;
+                    line-height: 26px;
+                }
+            }
+        }
+        & form button{
+            width: 160px;
+            height: 43px;
+        }
+    }
+}
